@@ -2,6 +2,7 @@ const List = require('immutable').List;
 const Map = require('immutable').Map;
 
 module.exports = {
+  INITIAL_STATE: Map(),
   setEntries: setEntries,
   next: next,
   vote: vote
