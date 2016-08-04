@@ -1,12 +1,13 @@
 const Map = require('immutable').Map;
+const fromJS = require('immutable').fromJS;
 const expect = require('chai').expect;
 
-const store = require('../src/store');
+const reduxStore = require('../src/store');
 
 describe('store', () => {
 
   it ('is a Redux store configured with the correct reducer', () => {
-    const store = store.makeStore();
+    const store = reduxStore.makeStore();
 
     expect(store.getState()).to.equal(Map());
 
