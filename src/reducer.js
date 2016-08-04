@@ -13,7 +13,8 @@ function reducer(state = INITIAL_STATE, action) {
     case 'NEXT':
       return core.next(state);
     case 'VOTE':
-      return core.vote(state, action.entry)
+      return state.update('vote',
+        voteState => core.vote(voteState, action.entry));
   }
   return state;
 }
